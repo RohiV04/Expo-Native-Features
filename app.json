@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Expi",
+    "slug": "Expi",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
