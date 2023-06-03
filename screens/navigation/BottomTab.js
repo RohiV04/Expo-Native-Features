@@ -1,11 +1,12 @@
 import { View, Text,TouchableOpacity } from 'react-native'
 import React from 'react'
-import Contacts from './ContactsAccess';
-import Camera from './Share';
-import Notifications from './NotificationAccess';
-import Location from './LocationAccess';
+import Contacts from '../ContactsAccess';
+import Camera from '../Share';
+import Map from '../MapView';
+import Location from '../LocationAccess';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import Notifications from '../Notifications';
 
 const Tab = createMaterialBottomTabNavigator();
 const BottomTab = () => {
@@ -42,9 +43,19 @@ const BottomTab = () => {
         name="Notifications"
         component={Notifications}
         options={{
-          tabBarLabel: 'Notifications',
+          tabBarLabel: 'Notification',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="bell" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Map"
+        component={Map}
+        options={{
+          tabBarLabel: 'Map',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="map" color={color} size={26} />
           ),
         }}
       />

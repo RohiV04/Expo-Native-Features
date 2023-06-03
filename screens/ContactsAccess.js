@@ -19,7 +19,7 @@ export default function ContactsAccess() {
         if (data.length > 0) {
           const contact = data[0];
           setContact(data);
-          console.log(data[0]);
+          console.log(data);
         }
       }
     })();

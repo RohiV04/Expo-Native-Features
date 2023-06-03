@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Platform, Text, View, StyleSheet } from 'react-native';
+import { Platform, Text, View, StyleSheet,ScrollView } from 'react-native';
+import MapView from 'react-native-maps';
 import {
   SafeAreaView,
   SafeAreaProvider,
@@ -37,18 +38,21 @@ export default function LocationAccess() {
 
   return (
     <SafeAreaView>
+    <ScrollView>
     <View style={styles.container}>
-      <Text style={styles.paragraph}>{text}</Text>
+      <Text>{text}</Text>
     </View>
+    </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({ 
-  paragraph:{
-    fontSize: 16,
-
-    alignContent:"center"
-
+  container: {
+    flex: 1,
+  },
+  map: {
+    width: '100%',
+    height: '100%',
   }
  }); 

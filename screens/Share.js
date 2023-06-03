@@ -2,7 +2,7 @@ import { StyleSheet, Text, View,Button,Image,TouchableOpacity,ScrollView } from 
 import React,{useState} from 'react'
 import * as ImagePicker from 'expo-image-picker';
 import { Camera, CameraType } from 'expo-camera';
-import {RNCamera} from 'react-native-camera';
+
 import * as Sharing from 'expo-sharing';
 const Share = () => {
   const [image, setImage] = useState(null);
